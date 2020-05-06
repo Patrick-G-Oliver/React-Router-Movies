@@ -31,12 +31,11 @@ const App = () => {
     <div>
       <SavedList list={savedList} />
       {/*<div>Replace this Div with your Routes</div>*/}
-      <Route exact path='/' component={MovieList.js}/>
-
       <MovieList movies={movieList}/>
-      
-      <Route path ='/movies/id' component={Movie.js}/>
-
+      <div>
+        <Route exact path='/' component={MovieList.js}/>
+        <Route path ='/movies/:id' component={Movie.js}/>
+      </div>
     </div>
   );
 };
