@@ -15,7 +15,7 @@ function MovieDetails({ movie }) {
   const { title, director, metascore, stars } = movie;
   return (
     /// questionable to property on line 18 (pick up here tomorrow)
-    <Link to='/movies/{movie.id}'>
+    <Link to={`/movies/${movie.id}`}>
       <div className="movie-card">
         <h2>{title}</h2>
         <div className="movie-director">
