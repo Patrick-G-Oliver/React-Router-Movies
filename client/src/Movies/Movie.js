@@ -6,13 +6,14 @@ import { useParams } from 'react-router-dom';
 const Movie = (props) => {
   const [movie, setMovie] = useState();
 // lines 9 - 10 and 12 added
-  const params = useParams();
-  console.log("Params", params);
-
-  const movie = props.movies.find(movie => `${movie.id}` === params.id);
+  const {id} = useParams();
+  console.log("Params", );
+  console.log(props);
+  /*const movieSelection = props.movies.find(movie => `${movie.id}` === params.id);
+  */
  
   useEffect(() => {
-    const id = 1;
+    
     // change ^^^ that line and grab the id from the URL
     // You will NEED to add a dependency array to this effect hook
 
@@ -32,7 +33,7 @@ const Movie = (props) => {
   //   const addToSavedList = props.addToSavedList;
   //   addToSavedList(movie)
   // }
-
+ 
   if (!movie) {
     return <div>Loading movie information...</div>;
   }
