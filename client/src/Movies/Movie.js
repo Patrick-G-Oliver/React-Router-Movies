@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+// line 4 added
+import { useParams } from 'react-router-dom';
 
 const Movie = (props) => {
   const [movie, setMovie] = useState();
+// lines 9 - 10 and 12 added
+  const params = useParams();
+  console.log("Params", params);
+
+  const movie = props.movies.find(movie => `${movie.id}` === params.id);
  
   useEffect(() => {
     const id = 1;

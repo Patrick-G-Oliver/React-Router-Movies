@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const MovieList = props => {
+
   return (
     <div className="movie-list">
       {props.movies.map(movie => (
@@ -14,7 +15,7 @@ const MovieList = props => {
 function MovieDetails({ movie }) {
   const { title, director, metascore, stars } = movie;
   return (
-    /// questionable to property on line 18 (pick up here tomorrow)
+    /// questionable 'to' property on line 18 (pick up here tomorrow)
     <Link to={`/movies/${movie.id}`}>
       <div className="movie-card">
         <h2>{title}</h2>

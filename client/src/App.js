@@ -27,12 +27,15 @@ const App = () => {
     setSavedList([...savedList, movie]);
   };
 
+  console.log('movies', movieList);
+
   return (
     <div>
       <SavedList list={savedList} />
       {/*<div>Replace this Div with your Routes</div>*/}
       <MovieList movies={movieList}/>
       <div>
+        <h2>helloooo?</h2>
         <Route exact path='/' component={MovieList.js}/>
         <Route path ='/movies/:id' component={Movie.js}/>
       </div>
